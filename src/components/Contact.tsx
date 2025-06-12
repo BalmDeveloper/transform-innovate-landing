@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Send, MapPin, Phone, Mail } from "lucide-react";
+import { Send, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -131,19 +131,6 @@ const Contact = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-foreground">Address</div>
-                    <div className="text-sm text-muted-foreground">
-                      123 Innovation Street<br />
-                      Tech District, TC 12345
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/10 rounded-lg">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -159,26 +146,6 @@ const Contact = () => {
                   <div>
                     <div className="font-medium text-foreground">Email</div>
                     <div className="text-sm text-muted-foreground">hello@transformationventures.com</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="animate-fade-in">
-              <CardContent className="p-6">
-                <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
                   </div>
                 </div>
               </CardContent>

@@ -20,12 +20,6 @@ const Header = () => {
               <a href="#course" className="text-foreground hover:text-primary transition-colors duration-200">
                 Course
               </a>
-              <a href="#portfolio" className="text-foreground hover:text-primary transition-colors duration-200">
-                Portfolio
-              </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors duration-200">
-                About
-              </a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors duration-200">
                 Contact
               </a>
@@ -51,20 +45,6 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Course
-              </a>
-              <a
-                href="#portfolio"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Portfolio
-              </a>
-              <a
-                href="#about"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
               </a>
               <a
                 href="#contact"
