@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Send, Phone, Mail } from "lucide-react";
+import { Send, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -36,23 +36,29 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-24 bg-gradient-to-b from-accent/20 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Let's Start Your Transformation
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            Ready to Transform Your
+            <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              Digital Future?
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to turn your vision into reality? Get in touch with us and 
-            let's discuss how we can help you succeed.
+            Get in touch with us and let's discuss how we can help you build and launch 
+            your digital business in just 30 days.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="lg:col-span-2">
-            <Card className="animate-fade-in">
+            <Card className="shadow-elegant hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
               <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
+                <CardTitle className="text-2xl flex items-center gap-2">
+                  <MessageCircle className="w-6 h-6 text-primary" />
+                  Send us a message
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -68,6 +74,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="Your full name"
+                        className="transition-all duration-200 focus:scale-[1.02] border-2 focus:border-primary/50"
                       />
                     </div>
                     <div>
@@ -82,6 +89,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="your@email.com"
+                        className="transition-all duration-200 focus:scale-[1.02] border-2 focus:border-primary/50"
                       />
                     </div>
                   </div>
@@ -96,6 +104,7 @@ const Contact = () => {
                       value={formData.company}
                       onChange={handleChange}
                       placeholder="Your company name"
+                      className="transition-all duration-200 focus:scale-[1.02] border-2 focus:border-primary/50"
                     />
                   </div>
                   
@@ -109,12 +118,17 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
-                      placeholder="Tell us about your project or training needs..."
+                      rows={6}
+                      placeholder="Tell us about your project or course interest..."
+                      className="transition-all duration-200 focus:scale-[1.02] border-2 focus:border-primary/50 resize-none"
                     />
                   </div>
                   
-                  <Button type="submit" size="lg" className="w-full group">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full group shadow-elegant hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:scale-105"
+                  >
                     Send Message
                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -124,30 +138,32 @@ const Contact = () => {
           </div>
 
           <div className="space-y-6">
-            <Card className="animate-fade-in">
+            <Card className="shadow-card hover:shadow-elegant transition-all duration-300 border-2 hover:border-primary/20">
               <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
+                <CardTitle className="text-xl">Get in Touch</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Phone className="h-5 w-5 text-primary" />
+              <CardContent className="space-y-6">
+                <div className="flex items-center gap-4 p-4 bg-accent/30 rounded-lg hover:bg-accent/50 transition-colors duration-200">
+                  <div className="p-3 bg-primary/10 rounded-xl">
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <div className="font-medium text-foreground">Phone</div>
-                    <div className="text-sm text-muted-foreground">+1 (555) 123-4567</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-foreground">Email</div>
+                    <div className="font-semibold text-foreground">Email</div>
                     <div className="text-sm text-muted-foreground">hello@transformationventures.com</div>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-primary/5 to-accent/20 border-2 border-primary/20 shadow-card hover:shadow-elegant transition-all duration-300">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-foreground mb-2">Ready to Start?</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Join hundreds of entrepreneurs who have transformed their ideas into successful digital businesses.
+                </p>
+                <Button variant="outline" className="w-full hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                  View Course Details
+                </Button>
               </CardContent>
             </Card>
           </div>
