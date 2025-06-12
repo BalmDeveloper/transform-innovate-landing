@@ -17,8 +17,8 @@ const Header = () => {
           
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#services" className="text-foreground hover:text-primary transition-colors duration-200">
-                Services
+              <a href="#course" className="text-foreground hover:text-primary transition-colors duration-200">
+                Course
               </a>
               <a href="#portfolio" className="text-foreground hover:text-primary transition-colors duration-200">
                 Portfolio
@@ -46,11 +46,11 @@ const Header = () => {
           <div className="md:hidden animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
               <a
-                href="#services"
+                href="#course"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Course
               </a>
               <a
                 href="#portfolio"

@@ -1,5 +1,5 @@
 
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -25,25 +25,6 @@ const Hero = () => {
                 Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg" className="group">
-                <Play className="mr-2 h-4 w-4" />
-                Watch Our Story
-              </Button>
-            </div>
-
-            <div className="flex items-center gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">100+</div>
-                <div className="text-sm text-muted-foreground">Innovators Trained</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">5★</div>
-                <div className="text-sm text-muted-foreground">Client Rating</div>
-              </div>
             </div>
           </div>
 
